@@ -1,0 +1,4 @@
+trialprojects
+=============
+
+Learning software development.
