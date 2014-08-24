@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<users>
+  <user>
+    <name>Anders</name>
+    <pw>banan</pw>
+  </user>
+  <user>
+    <name>Gustaf</name>
+    <pw>apelsin</pw>
+  </user>
+  <user>
+    <name>Klara</name>
+    <pw>päron</pw>
+  </user>
+</users>

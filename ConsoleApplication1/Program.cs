@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace ConsoleApplication1
 {
@@ -11,11 +12,12 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             Dictionary<string, string> users = new Dictionary<string, string>();
-            users.Add("Anders", "banan");
-            users.Add("Gustaf", "apelsin");
-            users.Add("Klara", "päron");
-            
-           
+            XDocument document = XDocument.Load("users.xml");
+            XElement root = document.Root;
+            foreach (XElement user in root.Elements("user"))
+            {
+                users.Add(user.Element("name").Value, user.Element("pw").Value);
+            }
             string userName = null;
             string userPassword = null;
             while (true)
